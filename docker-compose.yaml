@@ -6,8 +6,6 @@ services:
     entrypoint: dockerize -wait tcp://db:3306 -timeout 20s node index.js
     build:
       context: ./server
-    volumes:
-      - ./server:/usr/src/app
     ports:
       - 3000:3000
     networks:
